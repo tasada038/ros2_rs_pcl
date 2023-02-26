@@ -42,5 +42,21 @@ In the second shell, run the pcl_clustering node:
 ros2 run ros2_rs_pcl rs_pcl_clustering
 ```
 
+![rs clustering img](/img/pcl_cluster.png)
+
+### PCL and visualization marker sample
+Open two shells.
+In the first shell, run the ros2_intel_realsense node
+```
+ros2 launch realsense_examples rs_camera.launch.py
+```
+
+In the second shell, run the pcl_clustering node:
+```
+ros2 run ros2_rs_pcl rs_pcl_marker
+```
+
+![rs clustering img](/img/pcl_and_marker.png)
+
 ## License
 This repository is licensed under the MIT license, see LICENSE.

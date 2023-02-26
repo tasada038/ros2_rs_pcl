@@ -49,7 +49,6 @@ void RspclClusteringComponent::timer_callback(const sensor_msgs::msg::PointCloud
   // LeafSizeを細かくしすぎると、エラーとなり、止まる
   // [pcl::VoxelGrid::applyFilter] Leaf size is too small for the input dataset. Integer indices would overflow.
 
-
   // SAC Segmentation
   pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients);  
   pcl::PointIndices::Ptr inliers (new pcl::PointIndices);  

@@ -19,6 +19,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(PCL REQUIRED COMPONENTS common io)
 
@@ -34,6 +36,7 @@ include_directories(
 # Add executable
 add_executable(rs_pcl_filter src/filter/rspcl_filter_node.cpp src/filter/rspcl_filter_component.cpp)
 add_executable(rs_pcl_clustering src/clustering/rspcl_clustering_node.cpp src/clustering/rspcl_clustering_component.cpp)
+add_executable(rs_pcl_marker src/visualization_marker/rspcl_marker.cpp)
 
 ament_target_dependencies(rs_pcl_filter
   rclcpp 
@@ -45,13 +48,21 @@ ament_target_dependencies(rs_pcl_clustering
   sensor_msgs
 )
 
+ament_target_dependencies(rs_pcl_marker
+  rclcpp 
+  sensor_msgs
+  geometry_msgs
+  visualization_msgs
+)
 target_link_libraries(rs_pcl_filter ${PCL_LIBRARIES})
 target_link_libraries(rs_pcl_clustering ${PCL_LIBRARIES})
+target_link_libraries(rs_pcl_marker ${PCL_LIBRARIES})
 
 # Install Cpp executables
 install(TARGETS
   rs_pcl_filter
   rs_pcl_clustering
+  rs_pcl_marker
   DESTINATION lib/${PROJECT_NAME}
 )
 

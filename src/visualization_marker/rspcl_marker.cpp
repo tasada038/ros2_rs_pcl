@@ -98,7 +98,7 @@ class PclSub : public rclcpp::Node
         visualization_msgs::msg::Marker marker;
         marker.header.frame_id = "camera_color_optical_frame";
         marker.header.stamp = this->now();
-        marker.ns = "gng_map";
+        marker.ns = "sphere";
         marker.id = id++;
         marker.type = visualization_msgs::msg::Marker::SPHERE;
         marker.action = visualization_msgs::msg::Marker::ADD;
@@ -116,7 +116,7 @@ class PclSub : public rclcpp::Node
         visualization_msgs::msg::Marker arrow_r;
         arrow_r.header.frame_id = "camera_color_optical_frame";
         arrow_r.header.stamp = this->now();
-        arrow_r.ns = "gng_map";
+        arrow_r.ns = "arrow";
         arrow_r.id = id++;
         arrow_r.type = visualization_msgs::msg::Marker::ARROW;
         arrow_r.action = visualization_msgs::msg::Marker::ADD;
@@ -139,7 +139,7 @@ class PclSub : public rclcpp::Node
         visualization_msgs::msg::Marker arrow_g;
         arrow_g.header.frame_id = "camera_color_optical_frame";
         arrow_g.header.stamp = this->now();
-        arrow_g.ns = "gng_map";
+        arrow_g.ns = "arrow";
         arrow_g.id = id++;
         arrow_g.type = visualization_msgs::msg::Marker::ARROW;
         arrow_g.action = visualization_msgs::msg::Marker::ADD;
@@ -162,7 +162,7 @@ class PclSub : public rclcpp::Node
         visualization_msgs::msg::Marker text;
         text.header.frame_id = "camera_color_optical_frame";
         text.header.stamp = this->now();
-        text.ns = "gng_map";
+        text.ns = "text";
         text.id = id++;
         text.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
         text.action = visualization_msgs::msg::Marker::ADD;

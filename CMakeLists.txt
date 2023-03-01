@@ -41,11 +41,13 @@ add_executable(rs_pcl_marker src/visualization_marker/rspcl_marker.cpp)
 ament_target_dependencies(rs_pcl_filter
   rclcpp 
   sensor_msgs
+  pcl_conversions
 )
 
 ament_target_dependencies(rs_pcl_clustering
   rclcpp 
   sensor_msgs
+  pcl_conversions
 )
 
 ament_target_dependencies(rs_pcl_marker
@@ -53,6 +55,7 @@ ament_target_dependencies(rs_pcl_marker
   sensor_msgs
   geometry_msgs
   visualization_msgs
+  pcl_conversions
 )
 target_link_libraries(rs_pcl_filter ${PCL_LIBRARIES})
 target_link_libraries(rs_pcl_clustering ${PCL_LIBRARIES})

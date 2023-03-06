@@ -1,5 +1,5 @@
 # ros2_rs_pcl
-ROS2 sample of Realsense with PCL library
+ROS 2 sample of Realsense with PCL library
 
 ## Supported ROS 2 distributions
 ・Foxy (master)

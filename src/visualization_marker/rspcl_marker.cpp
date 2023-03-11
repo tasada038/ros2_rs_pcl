@@ -209,6 +209,39 @@ class PclSub : public rclcpp::Node
         // markers.markers.push_back(connection);  
       }
 
+      geometry_msgs::msg::Point point_1;
+      geometry_msgs::msg::Point point_2;
+      geometry_msgs::msg::Point point_3;
+      for(int i=0; i<1; i++){
+        visualization_msgs::msg::Marker triangle;
+        triangle.header.frame_id = "camera_color_optical_frame";
+        triangle.header.stamp = this->now();
+        triangle.ns = "triangle_list";
+        triangle.id = i;
+        triangle.type = visualization_msgs::msg::Marker::TRIANGLE_LIST;
+        triangle.action = visualization_msgs::msg::Marker::MODIFY;
+        triangle.scale.x = triangle.scale.y = triangle.scale.z = 1;
+        triangle.color.r = 0.0;
+        triangle.color.g = 1.0;
+        triangle.color.b = 0.0;
+        triangle.color.a = 1.0;
+        triangle.lifetime = rclcpp::Duration(0.0);
+
+        point_1.x = geometry_points[i].x;
+        point_1.y = geometry_points[i].y;
+        point_1.z = geometry_points[i].z;
+        point_2.x = geometry_points[i+30].x;
+        point_2.y = geometry_points[i+30].y;
+        point_2.z = geometry_points[i+30].z;
+        point_3.x = geometry_points[i+31].x;
+        point_3.y = geometry_points[i+31].y;
+        point_3.z = geometry_points[i+31].z;
+        triangle.points.push_back(point_1);
+        triangle.points.push_back(point_2);
+        triangle.points.push_back(point_3);
+        markers.markers.push_back(triangle);  
+      }
+
       publisher_m->publish(markers);
 
       sensor_msgs::msg::PointCloud2 sensor_msg;

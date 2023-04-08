@@ -110,7 +110,7 @@ class PclSub : public rclcpp::Node
         marker.color.g = 1.0;
         marker.color.b = 1.0;
         marker.color.a = 1.0;
-        marker.lifetime = rclcpp::Duration(0.0);
+        // marker.lifetime = rclcpp::Duration(0.0);
 
         // ARROW_r
         visualization_msgs::msg::Marker arrow_r;
@@ -133,7 +133,7 @@ class PclSub : public rclcpp::Node
         arrow_r.color.g = 0.0;
         arrow_r.color.b = 0.0;
         arrow_r.color.a = 1.0;
-        arrow_r.lifetime = rclcpp::Duration(0.0);
+        // arrow_r.lifetime = rclcpp::Duration(0.0);
 
         // ARROW_g
         visualization_msgs::msg::Marker arrow_g;
@@ -156,7 +156,7 @@ class PclSub : public rclcpp::Node
         arrow_g.color.g = 1.0;
         arrow_g.color.b = 0.0;
         arrow_g.color.a = 1.0;
-        arrow_g.lifetime = rclcpp::Duration(0.0);
+        // arrow_g.lifetime = rclcpp::Duration(0.0);
 
         // TEXT
         visualization_msgs::msg::Marker text;
@@ -177,7 +177,7 @@ class PclSub : public rclcpp::Node
         text.color.g = 1.0;
         text.color.b = 1.0;
         text.color.a = 1.0;
-        text.lifetime = rclcpp::Duration(0.0);
+        // text.lifetime = rclcpp::Duration(0.0);
 
         // LINE STRIP
         visualization_msgs::msg::Marker connection;
@@ -192,7 +192,7 @@ class PclSub : public rclcpp::Node
         connection.color.g = 1.0;
         connection.color.b = 0.0;
         connection.color.a = 1.0;
-        connection.lifetime = rclcpp::Duration(0.0);
+        // connection.lifetime = rclcpp::Duration(0.0);
         start_line.x = geometry_points[i].x;
         start_line.y = geometry_points[i].y;
         start_line.z = geometry_points[i].z;
@@ -225,7 +225,7 @@ class PclSub : public rclcpp::Node
         triangle.color.g = 1.0;
         triangle.color.b = 0.0;
         triangle.color.a = 1.0;
-        triangle.lifetime = rclcpp::Duration(0.0);
+        // triangle.lifetime = rclcpp::Duration(0.0);
 
         point_1.x = geometry_points[i].x;
         point_1.y = geometry_points[i].y;

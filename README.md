@@ -6,11 +6,6 @@ ROS 2 sample of Realsense with PCL library
 
 ・Humble (humble-devel is in development)
 
-## Supported ROS 2 distributions
-・Foxy (master)
-
-・Humble (humble-devel is in development)
-
 ## Requirements
 - Laptop PC
   - Ubuntu 20.04 Foxy
